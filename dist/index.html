@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/><link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <title>Flickr Search</title>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__title">Технічне завдання (Maklai)
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="start">
+        <div class="container">
+          <div class="start__inner">
+            <form class="start__form" id="searchForm" data-page="1" data-type="standart">
+              <div class="start__form-item">
+                <svg class="start__form-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.7898 22.7761L17.9574 16.9437C19.5219 15.145 20.4692 12.7982 20.4692 10.2333C20.4692 4.58714 15.8767 0 10.2359 0C4.58979 0 0.00265503 4.59246 0.00265503 10.2333C0.00265503 15.8741 4.59511 20.4665 10.2359 20.4665C12.8009 20.4665 15.1477 19.5193 16.9463 17.9548L22.7787 23.7871C22.917 23.9255 23.1033 24 23.2842 24C23.4652 24 23.6514 23.9308 23.7898 23.7871C24.0665 23.5104 24.0665 23.0528 23.7898 22.7761ZM1.43414 10.2333C1.43414 5.38004 5.38269 1.43681 10.2306 1.43681C15.0838 1.43681 19.027 5.38537 19.027 10.2333C19.027 15.0812 15.0838 19.035 10.2306 19.035C5.38269 19.035 1.43414 15.0865 1.43414 10.2333Z" fill="#273341"></path>
+                </svg><input class="start__form-input input" id="searchInp" name="request" type="text" placeholder="Ведіть пошуковий запит" autofocus="autofocus"/>
+              </div>
+              <button class="start__form-btn btn" type="submit">Знайти
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="images">
+        <div class="container">
+          <div class="images__inner">
+            <div class="images__items" id="imagesContainer">
+            </div>
+            <svg class="images__loading" id="loadIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 294.843 294.843" style="enable-background:new 0 0 294.843 294.843;" xml:space="preserve" width="512px" height="512px">
+              <g>
+                <g>
+                  <path class="active-path" d="M147.421,0c-3.313,0-6,2.687-6,6s2.687,6,6,6c74.671,0,135.421,60.75,135.421,135.421s-60.75,135.421-135.421,135.421   S12,222.093,12,147.421c0-50.804,28.042-96.902,73.183-120.305c2.942-1.525,4.09-5.146,2.565-8.088   c-1.525-2.942-5.147-4.09-8.088-2.565C30.524,41.937,0,92.118,0,147.421c0,81.289,66.133,147.421,147.421,147.421   s147.421-66.133,147.421-147.421S228.71,0,147.421,0z" data-original="#000000" data-old_color="##4F79E" fill="#4F79E4"></path>
+                  <path class="active-path" d="M205.213,71.476c-16.726-12.747-36.71-19.484-57.792-19.484c-52.62,0-95.43,42.81-95.43,95.43s42.81,95.43,95.43,95.43   c25.49,0,49.455-9.926,67.479-27.951c2.343-2.343,2.343-6.142,0-8.485c-2.343-2.343-6.143-2.343-8.485,0   c-15.758,15.758-36.709,24.436-58.994,24.436c-46.003,0-83.43-37.426-83.43-83.43s37.426-83.43,83.43-83.43   c36.894,0,69.843,24.715,80.126,60.104c0.924,3.182,4.253,5.011,7.436,4.087c3.182-0.925,5.012-4.254,4.087-7.436   C233.422,101.308,221.398,83.809,205.213,71.476z" data-original="#000000" data-old_color="##4F79E" fill="#4F79E4"></path>
+                  <path class="active-path" d="M217.773,129.262c-2.344-2.343-6.143-2.343-8.485,0c-2.343,2.343-2.343,6.142,0,8.485l22.57,22.571   c1.125,1.125,2.651,1.757,4.243,1.757s3.118-0.632,4.243-1.757l22.57-22.571c2.343-2.343,2.343-6.142,0-8.485   c-2.344-2.343-6.143-2.343-8.485,0l-18.328,18.328L217.773,129.262z" data-original="#000000" data-old_color="##4F79E" fill="#4F79E4"></path>
+                </g>
+              </g>
+            </svg>
+            <button class="images__lazy btn" id="lazyBtn" data-page="2" data-type="lazy">Більше
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
